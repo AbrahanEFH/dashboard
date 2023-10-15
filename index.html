@@ -6,10 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./dashboard.png" type="image/x-icon">
     <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
 
+    <div class="container">
+        <div class="dash-header">
+            <div class="header-left">
+                <i class="fa-solid fa-bars" id="bars"></i>
+                <p class="app-name">Dashboard</p>
+                <div class="search-wrapper">
+                    <input type="text" placeholder="Search.." class="search-input">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="header-right">
+                <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
+                <button class="notification-btn"><i class="fa-regular fa-bell bell"></i></button>
+                <button class="profile-btn">
+                    <img src="./" alt="">
+                    <span>Dev abrahan</span>
+                </button>
+            </div>
+
+            <button class="service-btn"><i class="fa-solid fa-server"></i></button>
+            <button class="open-side"><i class="fa-solid fa-bars"></i></button>
+        </div>
+        <div class="content">
+            <div class="sidebar">
+                <button class="close-side"><i class="fa-solid fa-xmark"></i></button>
+                <button class="switch-mode" title="Change Theme"><i class="fa-solid fa-moon moon"></i></button>
+                <a href="#" class="sidebar-buttons active home">
+                    <i class="fa-solid fa-house"></i>
+                </a>
+                <a href="#" class="sidebar-buttons"><i class="fa-regular fa-circle-user user"></i></a>
+                <a href="#" class="sidebar-buttons"><i class="fa-solid fa-calendar-days calendar"></i></a>
+                <a href="#" class="sidebar-buttons"><i class="fa-solid fa-gear gear"></i></a>
+                <a href="#" class="sidebar-buttons"></a>
+            </div>
+            <div class="request-section">
+                <div class="request-section-header">
+                    <p>Tickets</p>
+                    <p class="time">To Day</p>
+                </div>
+                <div class="request section-line">
+                    <div class="project-status">
+                        <div class="item-status">
+                            <span class="status-number">6</span>
+                            <span class="status-type">Progress</span>
+                        </div>
+                        <div class="item-status">
+                            <span class="status-number">17</span>
+                            <span class="status-type">Closed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="./script.js"></script>
 </body>
 
 </html>
