@@ -39,4 +39,52 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 })
 
-19: 48
+function createBarChart(ctx, data) {
+    new CharacterData(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Des'],
+            datasets: [{
+                label: 'Expense',
+                data: data,
+                borderWith: 1,
+                borderRadius: 30,
+                barThickness: 12,
+                backgroundColor: ['#66b2f0'],
+                borderColor: ['#111111'],
+                hoverBackgroundColor: ['#0f5085'],
+                hoverBorderColor: ['#111111']
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        callback: (value) => `${value}TB`,
+                        stepSize: 5,
+                    },
+                },
+                x: {
+                    grid: {
+                        display: false
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false,
+                    labels: {
+                        font: {
+                            size: 12,
+                            family: "'plus Jakarta Sans', snas-serif",
+                            lineHeight: 18,
+                            weight: 600
+                        }
+                    }
+                }
+            }
+        }
+    })
+}
