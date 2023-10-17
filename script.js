@@ -88,3 +88,24 @@ function createBarChart(ctx, data) {
         }
     })
 }
+
+const ctx1 = document.getElementByI('myChart')
+createBarChart(ctx1, [11, 3, 14, 7, 4, 15, 7, 9, 15, 13, 7, 14])
+const ctx2 = document.getElementByI('myChart2')
+createBarChart(ctx2, [10, 2, 13, 6, 3, 13, 6, 7, 12, 11, 6, 11])
+
+$(function () {
+    let desiredPercentage = 70;
+    let containerWith = $('.box').width();
+    let size = (desiredPercentage / 100) * containerWith;
+
+    $('.chart').easyPieChart({
+        size: size,
+        barColor: "#66b2f0",
+        scaleLength: 0,
+        lineWidth: 11,
+        trackColor: "#c8c8c8",
+        lineCap: "circle",
+        animate: 2000,
+    })
+})
