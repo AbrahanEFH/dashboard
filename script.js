@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    let modeSwitch = document.querySelector('switch-mode')
+    let modeSwitch = document.querySelector('.switch-mode')
 
     modeSwitch.addEventListener('click', () => {
         document.documentElement.classList.toggle('dark')
@@ -29,18 +29,18 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.data-close').addEventListener('click', () => {
         document.querySelector('.data-section').classList.remove('show')
     })
-    document.querySelector('.spen-side').addEventListener('click', () => {
+    document.querySelector('.open-side').addEventListener('click', () => {
         document.querySelector('.sidebar').classList.add('show')
-        document.querySelector('close-side').classList.add('show')
+        document.querySelector('.close-side').classList.add('show')
     })
     document.querySelector('.close-side').addEventListener('click', () => {
         document.querySelector('.sidebar').classList.remove('show')
-        document.querySelector('close-side').classList.remove('show')
+        document.querySelector('.close-side').classList.remove('show')
     })
 })
 
 function createBarChart(ctx, data) {
-    new CharacterData(ctx, {
+    new Chart(ctx, {
         type: 'bar',
         data: {
             labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Des'],
@@ -96,8 +96,8 @@ createBarChart(ctx2, [10, 2, 13, 6, 3, 13, 6, 7, 12, 11, 6, 11])
 
 $(function () {
     let desiredPercentage = 70;
-    let containerWith = $('.box').width();
-    let size = (desiredPercentage / 100) * containerWith;
+    let containerWidth = $('.box').width();
+    let size = (desiredPercentage / 100) * containerWidth;
 
     $('.chart').easyPieChart({
         size: size,
