@@ -702,3 +702,12 @@ a {
   left: 15%;
 
 }
+
+@media screen and (max-width: 1200px) {
+  .data-section {
+    transform: translateX(100%);
+    position: absolute;
+    opacity: 0;
+    top: 0;
+  }
+}
